@@ -1,0 +1,339 @@
+body {
+       --major-color: #222222;
+       --minor-color: orange;
+       margin: 0px;
+       font-family: Arial, Helvetica, sans-serif;
+       transition-duration: 0.3s;
+       background-color: var(--major-color);
+       color: white;
+}
+
+#nav-bar {
+       width: 100vw;
+       height: 50px;
+       display: flex;
+       flex-direction: row;
+       border-bottom: 1px black solid;
+       position: fixed;
+       margin: 0px;
+       background-color: black;
+       top: 0px;
+}
+
+p {
+       font-size: 2.3vw;
+}
+
+svg {
+       margin: 0px;
+       fill: orange;
+}
+
+h1 {
+       text-align: center;
+       font-size: 5vw;
+}
+
+h2 {
+       font-size: 2.5vw;
+}
+
+h3 {
+       font-size: 1.5vw;
+}
+
+@keyframes initialAnimationTitle {
+       from {
+              color: transparent;
+       }
+
+       to {
+              color: orange;
+       }
+}
+
+@keyframes initialAnimationWhitetext {
+       from {
+              color: transparent;
+       }
+
+       to {
+              color: white;
+       }
+}
+
+@keyframes buttonFlyIn {
+       from {
+              transform: translate(80vw, 0px);
+       }
+
+       to {
+              transform: translate(0px, 0px);
+       }
+}
+
+#title {
+       width: 100vw;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       background-image: url("./assets/pixel_art_background.png");
+       background-repeat: no-repeat;
+       background-size: cover;
+}
+
+#title>.options-div {
+       animation-name: buttonFlyIn;
+       animation-duration: 1s;
+       animation-delay: 0s;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;
+}
+
+#inthee-logo {
+       width: auto;
+       height: min-content;
+       margin-right: 70px;
+}
+
+#title-logo {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       width: 85vw;
+       color: transparent;
+}
+
+#logo {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 200px;
+}
+
+.spacer-div {
+       width: 100%;
+       height: inherit;
+}
+
+#title-logo>.bold-and-orange {
+       animation-name: initialAnimationTitle;
+       animation-duration: 1s;
+       animation-delay: 0s;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;
+}
+
+#title-logo>.big-text {
+       animation-name: initialAnimationWhitetext;
+       animation-duration: 1s;
+       animation-delay: 1.0s;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;
+}
+
+#intermediate-join {
+       width: 100vw;
+       height: fit-content;
+       padding: 10px 0px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-color: var(--major-color);
+}
+
+#explanation {
+       background-image: url('./assets/explanation-icon-concept-in-black-line-color-vector.jpg');
+       background-repeat: no-repeat;
+       background-size: 33vw auto;
+       background-position: right;
+       width: 100vw;
+       height: 100vh;
+       padding: 0px;
+}
+
+#so-far {
+       background-image: url('./assets/community.avif');
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+}
+
+#how-we-do-title:hover {
+       color: orange;
+       cursor: pointer;
+}
+
+#our-mission-title:hover {
+       color: orange;
+       cursor: pointer;
+}
+
+.stats-div {
+       margin-left: 20px;
+       font-size: 3.5vw;
+}
+
+.filter-div>p {
+       font-size: 3.5vw;
+}
+
+
+
+.slide-div {
+       height: 100vh;
+       width: 100vw;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       flex-wrap: wrap;
+}
+
+.icon-in-button-div {
+       display: flex;
+       flex-direction: row;
+       align-self: flex;
+       margin-left: 20px;
+       margin-right: 10px;
+}
+
+.options-div {
+       display: flex;
+       flex-direction: row;
+}
+
+.spacer-div {
+       width: 100%;
+}
+
+
+.gradient-filter-div {
+       background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+       width: 100vw;
+       height: 100vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+}
+
+.bold-and-orange {
+       color: orange;
+       font-weight: 700;
+}
+
+.filter-div {
+       background-color: rgba(0, 0, 0, 0.8);
+       width: 100vw;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+}
+
+.top-separator {
+       margin-top: 70px;
+}
+
+.list-with-title-div {
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       margin-bottom: 50px;
+       text-align: left;
+       width: 70vw;
+       height: 80px;
+       overflow: hidden;
+       border-top: 1px white solid;
+       border-bottom: 1px white solid;
+}
+
+button {
+       --button-width: 20vw;
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: center;
+       width: var(--button-width);
+       height: 60px;
+       margin: 15px;
+       border-radius: 10px;
+       border: 5px transparent solid;
+       background-color: orange;
+       color: white;
+       font-weight: 700;
+       font-size: large;
+       padding: 10px;
+       transition-duration: 0.3s;
+       overflow: hidden;
+}
+
+
+
+button:hover {
+       cursor: pointer;
+       border: 5px orange solid;
+       background-color: var(--major-color);
+       color: white;
+}
+
+button:hover>#dev-button-text,
+button:hover>#gamer-button-text {
+       transform: translate(0, 0);
+}
+
+@keyframes slidein {
+       from {
+              display: none;
+              color: transparent;
+              transform: translate(-10px, 0px);
+       }
+
+       to {
+              display: flex;
+              color: black;
+              transform: translate(0px, 0px);
+       }
+}
+
+#gamer-icon {
+       display: flex;
+       margin-left: 100px;
+       transform: translate(calc(var(--button-width) + 30px), 0px);
+       color: transparent;
+       transition-duration: 0.3s;
+}
+
+#dev-icon {
+       display: flex;
+       margin-left: 20px;
+       transform: translate(calc(var(--button-width) + 30px), 0px);
+       color: transparent;
+       transition-duration: 0.3s;
+}
+
+#gamer-button-text {
+       transform: translate(65px, 0px);
+       transition-duration: 0.3s;
+}
+
+#dev-button-text {
+       transform: translate(30px, 0px);
+       transition-duration: 0.3s;
+}
+
+button:hover>#gamer-icon,
+button:hover>#dev-icon {
+       /* animation-name: slidein;
+       animation-duration: 0.3s;
+       animation-iteration-count: 1;
+       animation-direction: normal; */
+       display: flex;
+       transform: translate(0px, 0px);
+}
