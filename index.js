@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function navigateToPath(path){
-       var baseUrl = window.location.host;
+       var currentUrl = window.location.href;
        window.location.replace(baseUrl + "form/dev.html")
 }
 
