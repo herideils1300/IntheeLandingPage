@@ -59,19 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function navigateToPath(path){
-       var currentUrl = window.location.href;
-       window.location.replace(baseUrl + "form/dev.html")
+       var currentUrl = window.location.origin;
+       window.location.href = currentUrl + path;
 }
 
 function toggleHowWeDo() {
        var dropDownDiv = howWeDo.parentElement;
-       dropDownDiv.style.transitionDuration = "0.3s"
-
-       if (dropDownDiv.style.height == "fit-content") {
-              dropDownDiv.style.height = "80px";
-       } else {
-              dropDownDiv.style.height = 'fit-content';
-       }
+       dropDownDiv.classList.toggle("list-with-title-div-opened")
 
 
 
@@ -79,11 +73,5 @@ function toggleHowWeDo() {
 
 function toggleOurMission() {
        var dropDownDiv = ourMission.parentElement;
-       dropDownDiv.style.transitionDuration = "0.3s"
-
-       if (dropDownDiv.style.height == "fit-content") {
-              dropDownDiv.style.height = "80px";
-       } else {
-              dropDownDiv.style.height = 'fit-content';
-       }
+       dropDownDiv.classList.toggle("list-with-title-div-opened")
 }

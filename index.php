@@ -23,13 +23,13 @@
                                    <h1 class="big-text">A store for independent games</h1>
                             </div>
                             <div class="options-div">
-                                   <button id="join-as-dev" class="stand-out-button" onclick="navigateToPath('yes');">
+                                   <button id="join-as-dev" class="stand-out-button" onclick="navigateToPath('/IntheeLandingPage/form/dev');">
                                           <div id="dev-button-text">Join as a game developer </div>
                                           <div id="dev-icon">
                                                  <img src="./assets/keyboard-svgrepo-com.svg" width="30" height="30" />
                                           </div>
                                    </button>
-                                   <button id="join-as-gamer" class="stand-out-button">
+                                   <button id="join-as-gamer" class="stand-out-button" onclick="navigateToPath('/IntheeLandingPage/form/gamer');">
                                           <div id="gamer-button-text" class="button-text">Join as a gamer </div>
                                           <div id="gamer-icon">
                                                  <img src="./assets/game-controller-joystick-svgrepo-com.svg" width="30"
@@ -56,9 +56,9 @@
               </div>
        </div>
        <div class="slide-div">
-              <div class="list-with-title-div">
+              <div class="list-with-title-div expand-transition-duration">
                      <div id="our-mission-title">
-                            <h2 onclick="toggleOurMission()">Our missions ˇ</h2>
+                            <h2 onclick="toggleOurMission()">Our missions <img src="./assets/arrow-down-svgrepo-com.svg" width="30" height="30"></img></h2>
                      </div>
                      <ul id="our-mission" style="list-style-type: disc; text-align: left; margin: 25px;">
                             <li>
@@ -75,9 +75,9 @@
 
                      </ul>
               </div>
-              <div class="list-with-title-div">
+              <div class="list-with-title-div expand-transition-duration">
                      <div id="how-we-do-title">
-                            <h2 onclick="toggleHowWeDo()">How we do it ˇ</h2>
+                            <h2 onclick="toggleHowWeDo()">How we do it <img src="./assets/arrow-down-svgrepo-com.svg" width="30" height="30"></img></h2>
                      </div>
                      <ul id="how-we-do" style="list-style-type: disc; text-align: left; margin: 25px;">
                             <li>
@@ -110,14 +110,14 @@
                             <div class="stats-div"><span id="comm-stat" class="bold-and-orange"></span> Gamers</div>
                      </div>
                      <div class="top-separator">
-                            <div class="options-div">
-                                   <button id="join-as-dev" class="stand-out-button">
+                             <div class="options-div">
+                                   <button id="join-as-dev" class="stand-out-button" onclick="navigateToPath('/IntheeLandingPage/form/dev');">
                                           <div id="dev-button-text">Join as a game developer </div>
                                           <div id="dev-icon">
                                                  <img src="./assets/keyboard-svgrepo-com.svg" width="30" height="30" />
                                           </div>
                                    </button>
-                                   <button id="join-as-gamer" class="stand-out-button">
+                                   <button id="join-as-gamer" class="stand-out-button" onclick="navigateToPath('/IntheeLandingPage/form/gamer');">
                                           <div id="gamer-button-text" class="button-text">Join as a gamer </div>
                                           <div id="gamer-icon">
                                                  <img src="./assets/game-controller-joystick-svgrepo-com.svg" width="30"

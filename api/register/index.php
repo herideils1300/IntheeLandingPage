@@ -35,5 +35,5 @@ mail(
        "
 );
 
-header('Location: '.'../index.html');
+header('Location: '.'http://localhost/form/confirmation/');
 die();
