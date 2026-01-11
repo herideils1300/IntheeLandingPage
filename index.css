@@ -64,7 +64,7 @@ h3 {
 
 @keyframes buttonFlyIn {
        from {
-              transform: translate(80vw, 0px);
+              transform: translate(1000px, 0px);
        }
 
        to {
@@ -100,7 +100,7 @@ h3 {
 
 #title-logo {
        display: flex;
-       flex-direction: row;
+       flex-direction: column;
        justify-content: center;
        align-items: center;
        width: 85vw;
@@ -146,7 +146,7 @@ h3 {
 }
 
 #explanation {
-       background-image: url('./assets/explanation-icon-concept-in-black-line-color-vector.jpg');
+       background-image: url('');
        background-repeat: no-repeat;
        background-size: 33vw auto;
        background-position: right;
@@ -249,7 +249,7 @@ h3 {
        margin-bottom: 50px;
        text-align: left;
        width: 70vw;
-       height: 100px;
+       height: 50px;
        overflow: hidden;
        border: 1px white solid;
        border-radius: 10px;
@@ -350,3 +350,25 @@ button:hover>#dev-icon {
        display: flex;
        transform: translate(0px, 0px);
 }
+
+
+@media screen and (max-width: 1136px) {
+       button{
+              width: 33vw;
+       }
+
+       .options-div{
+              display: flex;
+              flex-direction: column;
+       }
+}
+
+@media screen and (max-width: 965px) {
+       #title-logo{
+              display: flex;
+              flex-direction: column-reverse;
+              width: 50vw;
+       }
+}
+
+

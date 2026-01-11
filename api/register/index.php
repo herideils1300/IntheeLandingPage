@@ -1,39 +1,20 @@
 <?php
+include "../depends/dep_db.php";
 
 $email_variable = $_POST["email"];
 $flag = $_POST["flag"];
 
-mail(
-       $email_variable,
-       "Welcome to Inthee",
-       ($flag == "dev") ? "
-       Dear developer!
+$table_var = ($flag == "dev") ? "developers" : "gamers";
 
-       Thank you for joining the Inthee community.
-       We are glad to have you in our team of developers.
+$sql = "INSERT INTO $table_var (email) VALUES (?)";
 
-       For now, you can chill...
+$result = $db->execute_prepared($sql, [$email_variable]);
 
-       We will let you know when the site launches.
+if ($result){
+       echo "Success";
+       header("Location: ../../form/confirmation/");
+}else{
+       die("Error in execution.");
+}
 
-       Kind regards...
-
-       The Inthee team...
-       " : "
-       Dear gamer!
-
-       Thank you for joining the Inthee community.
-       We are glad to have you in our team of developers.
-
-       We will let you know when the site launches.
-       When it does you will get your code for one free game you can use in our service.
-
-       Until then, we kindly regard you and wish you the best.
-
-       Yours truly...
-       The Inthee team.
-       "
-);
-
-header('Location: '.'http://localhost/form/confirmation/');
 die();

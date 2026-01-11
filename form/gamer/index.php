@@ -16,10 +16,10 @@
                             <p>By submiting your email you will get:</p>
                             <ul>
                                    <!-- TODO: Name conditions and benefits -->
-                                   <li>Messages regarding launch date and the launch itself</li>
+                                   <li>Messages regarding launch date and the launch information</li>
                                    <li>A unique code to claim a game of your choice for free</li>
                             </ul>
-                            <form action="../../api/register" method="POST">
+                            <form action="../../api/register/" method="POST">
                                    <label for="email">Enter your email here</label>
                                    <input type="email" name="email" id="email-input" />
                                    <input type="text" value="gamer" name="flag" hidden="1">

@@ -10,7 +10,7 @@ body {
 
 
 @keyframes flyIn {
-       from { transform: translate(0px, -300px);}
+       from { transform: translate(0px, -1000px);}
        to {transform: translate(0px, 0px);}
 }
 
@@ -61,6 +61,9 @@ h2 {
        justify-content: center;
        align-items: center;
        flex-direction: column;
+       animation-name: flyIn;
+       animation-duration: 0.5s;
+       animation-fill-mode: forwards;
 }
 
 .major-input {

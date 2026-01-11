@@ -12,12 +12,12 @@
               <div class="filter">
                      <div class="dev-form">
                             <h2>Thank you for your subscription!</h2>
-                            <p>We will notify you about your status shortly!</p>
-                            <button type="button" style="major-input" href="../../index.php">Exit back to the landing page</button>
+                            <p>You have been registred to Inthee. We will let you know when we launch.</p>
+                            <button type="button" style="major-input" onclick="redirectBack()">Exit back to the landing page</button>
                      </div>
               </div>
 
        </div>
 </body>
-
+<script src="./redirect_back.js"></script>
 </html>
