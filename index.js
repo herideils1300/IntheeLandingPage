@@ -64,7 +64,7 @@ function navigateToPath(path){
 }
 
 function toggleHowWeDo() {
-       var dropDownDiv = howWeDo.parentElement;
+       var dropDownDiv = howWeDo.parentElement.children[1];
        dropDownDiv.classList.toggle("list-with-title-div-opened")
 
 
@@ -72,6 +72,6 @@ function toggleHowWeDo() {
 }
 
 function toggleOurMission() {
-       var dropDownDiv = ourMission.parentElement;
+       var dropDownDiv = ourMission.parentElement.children[1];
        dropDownDiv.classList.toggle("list-with-title-div-opened")
 }

@@ -3,9 +3,10 @@ body {
        --minor-color: orange;
        margin: 0px;
        font-family: Arial, Helvetica, sans-serif;
-       transition-duration: 0.3s;
-       background-color: var(--major-color);
        color: white;
+       width: 100vw;
+       height: 100vh;
+       overflow: hidden;
 }
 
 #nav-bar {
@@ -18,10 +19,45 @@ body {
        margin: 0px;
        background-color: black;
        top: 0px;
+       z-index: 1;
+}
+
+.nav-bar-element{
+       height: 100%;
+       width: fit-content;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: white;
+       font-weight: 700;
+       font-size: smaller;
+       text-decoration: none;
+       padding: 0px 50px;
+       transition-duration: 0.3s;
+}
+
+a{
+       text-decoration: none;
+}
+
+.nav-bar-element:hover{
+       background-color: orange;
+       color: white;
+       cursor: pointer;
+
+}
+
+#main{
+       width: inherit;
+       height: inherit;
+       overflow-y: scroll;
+       padding-right: 20px;
+       background-color: #222222;
+       overflow-x: hidden;
 }
 
 p {
-       font-size: 2.3vw;
+       font-size: 2.1vw;
 }
 
 svg {
@@ -31,7 +67,8 @@ svg {
 
 h1 {
        text-align: center;
-       font-size: 5vw;
+       font-size: 4.5vw;
+       margin: 5px 0px;
 }
 
 h2 {
@@ -40,6 +77,11 @@ h2 {
 
 h3 {
        font-size: 1.5vw;
+}
+
+hr{
+       width: 10vw;
+       margin-right: 120px;
 }
 
 @keyframes initialAnimationTitle {
@@ -64,7 +106,7 @@ h3 {
 
 @keyframes buttonFlyIn {
        from {
-              transform: translate(1000px, 0px);
+              transform: translate(1200px, 0px);
        }
 
        to {
@@ -79,23 +121,24 @@ h3 {
        flex-direction: column;
        align-items: center;
        justify-content: center;
-       background-image: url("./assets/pixel_art_background.png");
+       background-image: url("./assets/INThee.png");
        background-repeat: no-repeat;
        background-size: cover;
+       background-position: center center;
+       background-position-y: -300px;
 }
 
-#title>.options-div {
+.options-div {
        animation-name: buttonFlyIn;
        animation-duration: 1s;
-       animation-delay: 0s;
+       animation-delay: 1.2s;
        animation-iteration-count: 1;
-       animation-fill-mode: forwards;
+       animation-fill-mode: both;
 }
 
 #inthee-logo {
        width: auto;
-       height: min-content;
-       margin-right: 70px;
+       height: 80vw;
 }
 
 #title-logo {
@@ -103,7 +146,7 @@ h3 {
        flex-direction: column;
        justify-content: center;
        align-items: center;
-       width: 85vw;
+       width: 75vw;
        color: transparent;
 }
 
@@ -112,6 +155,16 @@ h3 {
        justify-content: center;
        align-items: center;
        width: 200px;
+}
+
+#animation-paragraph{
+       animation-name: buttonFlyIn;
+       animation-duration: 1s;
+       animation-delay: 1.2s;
+       animation-iteration-count: 1;
+       animation-fill-mode: both;
+       margin-bottom: 5px;
+       font-weight: 500;
 }
 
 .spacer-div {
@@ -126,6 +179,17 @@ h3 {
        animation-iteration-count: 1;
        animation-fill-mode: forwards;
 }
+
+#title-logo>.big-text>.bold-and-orange{
+       animation: initialAnimationTitle;
+       animation-fill-mode: forwards;
+       animation-duration: 1s;
+       animation-delay: 1s;
+       animation-iteration-count: 1;
+       color: transparent;
+}
+
+
 
 #title-logo>.big-text {
        animation-name: initialAnimationWhitetext;
@@ -172,11 +236,6 @@ h3 {
        cursor: pointer;
 }
 
-.stats-div {
-       margin-right: 20px;
-       font-size: 3.5vw;
-}
-
 .filter-div>p {
        font-size: 3.5vw;
 }
@@ -185,7 +244,7 @@ h3 {
 
 .slide-div {
        height: 100vh;
-       width: 100vw;
+       width: 100%;
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -214,7 +273,7 @@ h3 {
 
 
 .gradient-filter-div {
-       background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+       background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
        width: 100vw;
        height: 100vh;
        display: flex;
@@ -229,7 +288,17 @@ h3 {
 }
 
 .filter-div {
-       background-color: rgba(0, 0, 0, 0.8);
+       background-color: rgba(0, 0, 0, 0.3);
+       width: 100vw;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+}
+
+.filter-div-orange{
+       background-color: rgba(0, 0, 0, 0.3);
        width: 100vw;
        height: 100vh;
        display: flex;
@@ -249,10 +318,9 @@ h3 {
        margin-bottom: 50px;
        text-align: left;
        width: 70vw;
-       height: 50px;
+       height: 0px;
        overflow: hidden;
-       border: 1px white solid;
-       border-radius: 10px;
+       border: none;
        padding: 20px;
 
 }
@@ -349,6 +417,33 @@ button:hover>#dev-icon {
        animation-direction: normal; */
        display: flex;
        transform: translate(0px, 0px);
+}
+
+@font-face {
+       font-family: "Great Vibes";
+       src: url("./assets/GreatVibes-Regular.ttf");
+}
+
+.cursive-paragraph{
+       font-family: "Great Vibes";
+       font-size: 3.5vw;
+       align-self: flex-end;
+       text-align: end;
+       margin-right: 150px;
+       margin-bottom: 0px;
+       margin-top: 10px;
+}
+
+.little-under-cursive{
+       font-size: 10px;
+       font-family: Arial, Helvetica, sans-serif;
+       text-decoration: none;
+       margin-top: 0px;
+       margin-right: 100px;
+}
+
+.justify-paragraph{
+       text-align: justify;
 }
 
 

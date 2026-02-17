@@ -5,7 +5,7 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Document</title>
-       <link rel="stylesheet" href="../form.css">
+       <link rel="stylesheet" href="form\form.css">
 </head>
 <body>
        <div id="main">
@@ -16,8 +16,7 @@
                             <button type="button" style="major-input" onclick="redirectBack()">Exit back to the landing page</button>
                      </div>
               </div>
-
        </div>
 </body>
-<script src="./redirect_back.js"></script>
+<script src="form\confirmation\redirect_back.js"></script>
 </html>

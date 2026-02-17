@@ -12,13 +12,15 @@
        <div id="main">
               <div class="filter">
                      <div class="dev-form">
-                            <h2>Developer form</h2>
-                            <p>By submiting your email you will get:</p>
+                     <div class="explanation-div">
+                            As an early developer you get:
                             <ul>
-                                   <!-- TODO: Name conditions and benefits -->
-                                   <li>Messages regarding launch date and the launch itself</li>
-                                   <li>A unique code to claim a game of your choice for free</li>
+                                          <li>1. Access to 1 of 3 Curated Game Bundles <br/>
+                                   Subscribers receive access to one of three rotating curated game bundles.</li>
+                                   <li>2. Personal Game Library without path reset (Browser Access)</li>
+                                   <li>3. Access to the idea market</li>
                             </ul>
+                     </div>
                             <form action="../../api/register/" method="POST">
                                    <label for="email">Enter your email here</label>
                                    <input type="email" name="email" id="email-input" />
