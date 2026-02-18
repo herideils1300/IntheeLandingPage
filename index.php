@@ -25,14 +25,14 @@
                             </div>
                             <div class="options-div">
                                    <button id="join-as-dev" class="stand-out-button"
-                                          onclick="navigateToPath('/form/dev');">
+                                          onclick="navigateToPath('/form/dev/');">
                                           <div id="dev-button-text">For game developers </div>
                                           <div id="dev-icon">
                                                  <img src="./assets/keyboard-svgrepo-com.svg" width="30" height="30" />
                                           </div>
                                    </button>
                                    <button id="join-as-gamer" class="stand-out-button"
-                                          onclick="navigateToPath('/form/gamer');">
+                                          onclick="navigateToPath('/form/gamer/');">
                                           <div id="gamer-button-text" class="button-text">For gamers</div>
                                           <div id="gamer-icon">
                                                  <img src="./assets/game-controller-joystick-svgrepo-com.svg" width="30"

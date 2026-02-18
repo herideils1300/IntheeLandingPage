@@ -1,6 +1,5 @@
-FROM php:8.0-cli
-RUN choco install php
-WORKDIR /landing
+FROM php:8.2-cli
 COPY . .
-CMD ["php" "-S" "127.0.0.1:80"]
+CMD [ "php", "-S", "0.0.0.0:80" ]
+
 
