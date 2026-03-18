@@ -8,6 +8,7 @@ const communityStatistic = document.getElementById("comm-stat");
 const developerStatistic = document.getElementById("dev-stat");
 const howWeDo = document.getElementById("how-we-do");
 const ourMission = document.getElementById("our-mission");
+let dropDownDiv = document.getElementById("drop-down");
 
 //Stats to fetch
 var gamersNum = 0
@@ -24,13 +25,9 @@ var currentScroll = 0
 
 
 
-
-
-
-function fetchStats() {
-       communityStatistic.innerHTML = gamersNum.toString();
-       developerStatistic.innerHTML = devsNum.toString();
-}
+document.addEventListener("DOMContentLoaded", () => {
+       dropDownDiv.style.visibility = "hidden";
+})
 
 // document.addEventListener("scrollEnd", (ev) => {
 //        currentScroll = body.scrollTop
@@ -54,9 +51,6 @@ function fetchStats() {
 //        })
 
 // }
-document.addEventListener("DOMContentLoaded", () => {
-       fetchStats();
-})
 
 function navigateToPath(path){
        var currentUrl = window.location.origin;
@@ -66,12 +60,13 @@ function navigateToPath(path){
 function toggleHowWeDo() {
        var dropDownDiv = howWeDo.parentElement.children[1];
        dropDownDiv.classList.toggle("list-with-title-div-opened")
-
-
-
 }
 
 function toggleOurMission() {
        var dropDownDiv = ourMission.parentElement.children[1];
        dropDownDiv.classList.toggle("list-with-title-div-opened")
+}
+
+function toggleDropDownVisibility(){
+       dropDownDiv.style.visibility = (dropDownDiv.style.visibility == "hidden") ? "visible" : "hidden";
 }

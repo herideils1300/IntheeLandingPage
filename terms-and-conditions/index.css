@@ -9,6 +9,12 @@ body {
        overflow: hidden;
 }
 
+pre{
+       font-family: Arial, Helvetica, sans-serif;
+       font-weight: 500;
+       font-size: x-large;
+}
+
 #nav-bar {
        width: 100vw;
        height: 50px;
@@ -20,30 +26,6 @@ body {
        background-color: black;
        top: 0px;
        z-index: 1;
-}
-
-#drop-down{
-       position: fixed;
-       background-color: #222222;
-       color: white;
-       height: inherit;
-       left: 83vw;
-       top: 50px;
-}
-
-.drop-down-element{
-       background-color: #222222;
-       width: inherit;
-       color: white;
-       height: fit-content;
-       padding: 20px 50px;
-       transition-duration: 0.3s;
-       text-align: right;
-}
-
-.drop-down-element:hover{
-       background-color: orange;
-       color: white;
 }
 
 .nav-bar-element{
@@ -149,13 +131,13 @@ hr{
        background-repeat: no-repeat;
        background-size: cover;
        background-position: center center;
-       background-position-y: -19vw;
+       background-position-y: -18vw;
 }
 
 .options-div {
        animation-name: buttonFlyIn;
        animation-duration: 1s;
-       animation-delay: 0.5s;
+       animation-delay: 1.2s;
        animation-iteration-count: 1;
        animation-fill-mode: both;
 }
@@ -208,6 +190,7 @@ hr{
        animation: initialAnimationTitle;
        animation-fill-mode: forwards;
        animation-duration: 1s;
+       animation-delay: 1s;
        animation-iteration-count: 1;
        color: transparent;
 }
@@ -217,8 +200,10 @@ hr{
 #title-logo>.big-text {
        animation-name: initialAnimationWhitetext;
        animation-duration: 1s;
+       animation-delay: 1.0s;
        animation-iteration-count: 1;
        animation-fill-mode: forwards;
+       color: black;
 }
 
 #intermediate-join {
@@ -232,6 +217,10 @@ hr{
 }
 
 #explanation {
+       background-image: url('');
+       background-repeat: no-repeat;
+       background-size: 33vw auto;
+       background-position: right;
        width: 100vw;
        height: 100vh;
        padding: 0px;
@@ -362,7 +351,6 @@ button {
        width: var(--button-width);
        height: 60px;
        margin: 15px;
-       margin-left: 45px;
        border-radius: 10px;
        border: 5px transparent solid;
        background-color: orange;
@@ -467,10 +455,6 @@ button:hover>#dev-icon {
 
 
 @media screen and (max-width: 1136px) {
-       #title{
-              background-position-y: -15vw;
-       }
-
        button{
               width: 33vw;
        }
@@ -483,32 +467,14 @@ button:hover>#dev-icon {
 
 @media screen and (max-width: 965px) {
 
-       h1, h2, .justify-paragraph{
-              font-size: 30px;
-       }
-
-       #title{
-              background-position-y: -14vw;
-       }
-
-       .big-text{
-              font-size: 50px;
-              margin-top: -150px;
-              width: 100vw;
-       }
-
-       button{
-              --button-width: 300px;
-              width: 300px;
-              margin: 5px;
+       .options-div {
+              flex-direction: row;
        }
 
        #title-logo{
               width: 50vw;
-              font-size: 30px;
+              margin-bottom: calc(100px + 5vw);
        }
 }
-
-
 
 

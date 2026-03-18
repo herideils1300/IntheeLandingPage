@@ -1,3 +1,3 @@
 <?php
-
-echo "Forbidden 403";
+header("Location: ../");
+?>

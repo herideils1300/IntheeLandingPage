@@ -1,3 +1,6 @@
+<?php
+ require "../../header.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,19 +12,16 @@
 </head>
 
 <body>
+       <script src="index.js"></script>
        <div id="main">
               <div class="filter">
                      <div class="dev-form">
                             <div class="explanation-div">
                                    As an early community member you get:
-                                   <ul>
-                                          <li>1. Access to 1 of 3 Curated Game Bundles <br/>
-                                          Subscribers receive access to one of three rotating curated game bundles.</li>
-                                          <li>2. Personal Game Library without path reset (Browser Access)</li>
-                                          <li>3. Access to the idea market</li>
-                                   </ul>
+                                   <li>A welcome gift consisting of multiple classic games</li>
+                                   <li>A notification for the exclusive first launch</li>
                             </div>
-                            <form action="../../api/register/" method="POST">
+                            <form method="POST">
                                    <label for="email">Enter your email here</label>
                                    <input type="email" name="email" id="email-input" />
                                    <input type="text" value="gamer" name="flag" hidden="1">
@@ -29,7 +29,7 @@
                                           to our
                                           terms and conditions <br>
                                           and want to recieve information about the store launch.</p>
-                                   <button type="submit" class="major-input">Become a member</button>
+                                   <button type="button" onclick="submitForm()" class="major-input">Become a member</button>
                             </form>
                      </div>
               </div>

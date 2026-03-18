@@ -1,3 +1,6 @@
+<?php
+ require "../../header.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,25 +9,19 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Document</title>
        <link rel="stylesheet" href="../form.css">
+       <!--<script src="https://t.contentsquare.net/uxa/7700e7f6bf328.js"></script>-->
 </head>
 
 <body>
+       <script src="index.js"></script>
        <div id="main">
               <div class="filter">
                      <div class="dev-form">
-                     <div class="explanation-div">
-                            As an early developer you get:
-                            <ul>
-                                          <li>1. Access to 1 of 3 Curated Game Bundles <br/>
-                                   Subscribers receive access to one of three rotating curated game bundles.</li>
-                                   <li>2. Personal Game Library without path reset (Browser Access)</li>
-                                   <li>3. Access to the idea market</li>
-                            </ul>
-                     </div>
-                            <form action="../../api/register/" method="POST">
+                            <form action="http://localhost:3000/register/" method="POST">
                                    <label for="email">Enter your email here</label>
                                    <input type="email" name="email" id="email-input" />
                                    <input type="text" value="dev" name="flag" hidden="1" />
+                                   <input type="text" hidden="1" name="origin" id="locationValue"/>
                                    <p style="text-align:center;font-size:15px;" class="alert">By clicking the submit button you agree
                                           to our
                                           terms and conditions <br>
