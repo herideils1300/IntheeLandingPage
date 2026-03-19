@@ -25,6 +25,7 @@
                                    <label for="email">Enter your email here</label>
                                    <input type="email" name="email" id="email-input" />
                                    <input type="text" value="gamer" name="flag" hidden="1">
+                                   <input type="text" hidden="1" name="origin" id="locationValue"/>
                                    <p style="text-align:center;font-size:15px;" class="alert">By clicking the submit button you agree
                                           to our
                                           terms and conditions <br>
