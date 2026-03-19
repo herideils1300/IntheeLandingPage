@@ -1,15 +1,13 @@
 <?php
 class CsvReadWrite{
 
-       private $file_path = "data/mail_devs.csv";
+       private $file_path_devs = "../data/mail_developers.csv";
+       private $file_path_gamers = "../data/mail_gamers.csv";
 
-       private function return_all_instances($file_path = null){
-
-              if($file_path != null){
-                     $this->file_path = $file_path;
-              }
+       public function return_all_instances($file_path = "devs"){
               //Returns all instances of the csv file
-              $file_pointer = fopen($this->file_path, "r");
+              $full_file_path = ($file_path == "devs") ? $this->file_path_devs : $this->file_path_gamers;
+              $file_pointer = fopen($full_file_path, "r");
               $instances = fgetcsv($file_pointer);
               fclose($file_pointer);
 
@@ -18,11 +16,9 @@ class CsvReadWrite{
 
        public function add_instance($instance, $file_path = null){
 
-              if($file_path != null){
-                     $this->file_path = $file_path;
-              }
+              $full_file_path = ($file_path == "devs") ? $this->file_path_devs : $this->file_path_gamers;
 
-              if(!file_exists($this->file_path)){
+              if(!file_exists($full_file_path)){
                      // $dir_path = split("/", $this->file_path);
                      // array_pop($dir_path);
                      // $dir_path_string = $dir_path->join("/");
@@ -41,7 +37,7 @@ class CsvReadWrite{
 
 
               // Adding the new instances
-              $file_pointer = fopen($this->file_path, "w");
+              $file_pointer = fopen($full_file_path, "w");
               $instances = fputcsv($file_pointer, $full_instances);
               fclose($file_pointer);
        }
