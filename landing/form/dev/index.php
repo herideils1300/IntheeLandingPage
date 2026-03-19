@@ -17,7 +17,7 @@
        <div id="main">
               <div class="filter">
                      <div class="dev-form">
-                            <form action="http://localhost:3000/register/" method="POST">
+                            <form action="../send.php" method="POST">
                                    <label for="email">Enter your email here</label>
                                    <input type="email" name="email" id="email-input" />
                                    <input type="text" value="dev" name="flag" hidden="1" />

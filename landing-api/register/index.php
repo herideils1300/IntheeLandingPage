@@ -11,19 +11,19 @@ if(in_array($origin, CORSOrigin::$allowed_origins)){
 }
 
 $email_variable = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-$flag = $_POST["flag"];
-$origin = $_POST["origin"];
+$flag = htmlspecialchars($_POST["flag"]);
+$origin = htmlspecialchars($_POST["origin"]);
 
 if($flag == "dev"){
        $check_data = $csv->return_all_instances();
        if(in_array($email_variable, $check_data)){
-              die("The email already exists!");
+              echo(false);
        }
        $csv->add_instance($email_variable, "data/mail_developers.csv");
 }else{
        $check_data = $csv->return_all_instances("data/mail_gamers.csv");
        if(in_array($email_variable, $check_data)){
-              die("The email already exists!");
+              echo("The email already exists!");
        }
        $csv->add_instance($email_variable, "data/mail_gamers.csv");
 }
